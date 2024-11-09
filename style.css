@@ -1,0 +1,44 @@
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .card {
+    width: 100px;
+    height: 150px;
+    background-image: url('img/card-back.JPEG'); 
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .card.revealed {
+    transform: rotateY(180deg);
+  }
+
+  .card.matched {
+    visibility: hidden;
+  }
+  body {
+    background: linear-gradient(to bottom, #ff00d4, #370032);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    color: black;
+    margin: 20px 0;
+  }
